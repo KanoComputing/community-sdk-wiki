@@ -6,7 +6,7 @@
 
 >A software development kit (SDK or devkit) is typically a set of software development tools that allows the creation of applications for a certain software package, software framework, hardware platform, computer system, video game console, operating system, or similar development platform.
 
-The community SDK are scripts, tools and libraries to help you to interact with your Kano Devices with your favorite programming language. They are developed to be easy to understand and use in first place.
+The community SDK are scripts, tools and libraries to help you to interact with your Kano devices using your favorite programming language. They are developed to be easy to understand and use in first place.
 
 ## Goals
 - Enable you to interact with Kano devices/kits on your favorite programming language.
