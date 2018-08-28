@@ -1,5 +1,3 @@
-# Available SDKs
-
 ## Javascript/Node.js
 
 - [Source code](https://github.com/KanoComputing/community-sdk/tree/nodejs)
