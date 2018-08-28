@@ -279,3 +279,54 @@ Connect your Pixel Kit to a network.
     * `rpcResponse.port` `<string>`: Opened port to connect via Websockets. Should always be `9998`
     * `rpcResponse.netmask` `<string>`: [Network mask](https://support.microsoft.com/en-us/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics) of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
     * `rpcResponse.gateway` `<string>`: [Default gatway](https://support.microsoft.com/en-us/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics) of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
+
+Example:
+
+```javascript
+rpk.connectToWifi('my wifi network', 'supersecretpassword123')
+.then((response) => {
+    // Do something with the `response.value`
+})
+```
+
+### Event: `button-down`
+
+Triggered when any button or joystick is pressed.
+
+* `buttonId` `<string>`: Button id that just got pressed. It could be `btn-A`, `btn-B`, `js-up`, `js-down`, `js-left`, `js-right`, `js-click` or `btn-reset` (yes, you can use the button on the back of your Pixel Kit!).
+
+Example:
+
+```javascript
+device.on('button-down', (buttonId) => {
+    console.log(buttonId);
+});
+```
+
+### Event: `button-up`
+
+Triggered when any button or joystick is released.
+
+* `buttonId` `<string>`: Button id that just got released. It could be `btn-A`, `btn-B`, `js-up`, `js-down`, `js-left`, `js-right`, `js-click` or `btn-reset` (yes, you can use the button on the back of your Pixel Kit!).
+
+Example:
+
+```javascript
+device.on('button-up', (buttonId) => {
+    console.log(buttonId);
+});
+```
+
+### Event: `dial`
+
+Triggered when the "mode" dial is turned.
+
+* `modeId` `<string>`: Name of the mode relative to the dial position. It could be `offline-1`, `offline-2`, `online-1`, `online-2`, `online-3`.
+
+Example:
+
+```javascript
+device.on('dial', (modeId) => {
+    console.log(modeId);
+});
+```
