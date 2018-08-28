@@ -25,7 +25,7 @@ You can check Python and Pip versions by typing `node --version` and `yarn --ver
 
 If your computer had python 2 already installed you might have to add `3` after all your commands, like `python3 --version` and `pip3 --version`. We strongly recommend using [Mu Editor](https://codewith.mu/) if you don't want to deal with this kind of issue.
 
-## Downloading and installing the SDK
+## Downloading SDK and installing dependencies 
 
 ### Javascript/Node.js
 
