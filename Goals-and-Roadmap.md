@@ -1,5 +1,3 @@
-# Community SDK goals and roadmap
-
 ## What is the Community SDK?
 
 [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Software_development_kit):
