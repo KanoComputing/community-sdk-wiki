@@ -191,13 +191,13 @@ rpk.streamFrame(frame)
 
 Get battery percentage and charging status.
 
-- Returns: <Promise>
-    - `rpcResponse` `<Object>`:
-        - `rpcResponse.type` `<string>`: This should always be `rpc-response`
-        - `rpcResponse.err` `<integer>`: This should always be `0`
-        - `rpcResponse.value` `<Object>`:
-                - `rpcResponse.value.percent` `<string>`: Should be a value between `'0'` and `'100'`
-                - `rpcResponse.value.status` `<string>`: Should be `'Charging'` or `'Discharging'`
+* Returns: <Promise>
+  * `rpcResponse` `<Object>`:
+    * `rpcResponse.type` `<string>`: This should always be `rpc-response`
+    * `rpcResponse.err` `<integer>`: This should always be `0`
+    * `rpcResponse.value` `<Object>`:
+      * `rpcResponse.value.percent` `<string>`: Should be a value between `'0'` and `'100'`
+      * `rpcResponse.value.status` `<string>`: Should be `'Charging'` or `'Discharging'`
 
 Example:
 
@@ -210,24 +210,32 @@ rpk.getBatteryStatus()
 
 ### `getWifiStatus()`
 
-Get status of wifi adapter on Pixel Kit
+Get status of wifi adapter on Pixel Kit.
 
-- Returns: <Promise>
-    - `rpcResponse` `<Object>`:
-        - `rpcResponse.type` `<string>`: This should always be `rpc-response`
-        - `rpcResponse.err` `<integer>`: This should always be `0`
-        - `rpcResponse.value` `<Object>`:
-                - `rpcResponse.value.connected` `<boolaen>`: Flags if Pixel Kit is connected to a wifi network.
-                - `rpcResponse.value.ip` `<string>`: Ip address of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
-                - `rpcResponse.value.ssid` `<string>`: Name of wifi network that the Pixel Kit is connected. Value is empty (`''`) if not connected.
-                - `rpcResponse.value.mac_address` `<string>`: [Machine address](https://whatismyipaddress.com/mac-address) of your Pixel Kit network adapter.
-                - `rpcResponse.value.port` `<string>`: Opened port to connect via Websockets. Should always be `'9998'`
-                - `rpcResponse.value.netmask` `<string>`: [Network mask](https://support.microsoft.com/en-us/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics) of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
-                - `rpcResponse.value.gateway` `<string>`: [Default gatway](https://support.microsoft.com/en-us/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics) of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
-
-
+* Returns: <Promise>
+  * `rpcResponse` `<Object>`:
+    * `rpcResponse.type` `<string>`: This should always be `rpc-response`
+    * `rpcResponse.err` `<integer>`: This should always be `0`
+    * `rpcResponse.value` `<Object>`: 
+      * `rpcResponse.value.connected` `<boolean>`: Flags if Pixel Kit is connected to a wifi network.
+      * `rpcResponse.value.ip` `<string>`: Ip address of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
+      * `rpcResponse.value.ssid` `<string>`: Name of wifi network that the Pixel Kit is connected. Value is empty (`''`) if not connected.
+      * `rpcResponse.value.mac_address` `<string>`: [Machine address](https://whatismyipaddress.com/mac-address) of your Pixel Kit network adapter.
+      * `rpcResponse.value.port` `<string>`: Opened port to connect via Websockets. Should always be `9998`
+      * `rpcResponse.value.netmask` `<string>`: [Network mask](https://support.microsoft.com/en-us/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics) of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
+      * `rpcResponse.value.gateway` `<string>`: [Default gatway](https://support.microsoft.com/en-us/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics) of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
 
 
+### `scanWifi()`
 
+Scan available wifi networks your Pixel Kit can connect to.
 
+* Returns: <Promise>
+  * `rpcResponse` `<Object>`:
+    * `rpcResponse.type` `<string>`: This should always be `rpc-response`
+    * `rpcResponse.err` `<integer>`: This should always be `0`
+    * `rpcResponse.value` `<Array>`: Array of objects containing information about the available networks. This objects contain:
+      * `ssid` `<string>`: Network name.
+      * `signal` `<integer>`: Strength of wifi signal. Ranges from `0` to `100`
+      * `security` `<integer>`: Name of wifi network that the Pixel Kit is connected. Value is empty (`''`) if not connected.
 
