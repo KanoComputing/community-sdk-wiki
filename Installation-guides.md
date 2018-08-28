@@ -1,6 +1,6 @@
 ## Before you start (requirements)
 
-You will need to install or have installed a few softwares before you start. Those are basically the bare minimum you need to even use the programming language and a software that will allow you to install all the other required dependencies easily.
+You will need to install or have installed a few softwares before you start. Those are just enough use the programming language and a dependency manager (so it's easy to install the other dependencies).
 
 We won't go in detail on how to install it but a quick search "How to install *name of the software* on *name of your operational system*" will probably show enough tutorials.
 
@@ -34,7 +34,29 @@ If your computer had python 2 already installed you might have to add `3` after 
 1. Navigate to your unzipped folder using the terminal. Check how to do it on [Windows](https://www.watchingthenet.com/how-to-navigate-through-folders-when-using-windows-command-prompt.html), [MacOS](https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html) or [Linux](https://www.digitalocean.com/community/tutorials/basic-linux-navigation-and-file-management)
 1. Install all the dependencies by running `yarn install`. That might take a while.
 1. Connect your Kano device to your computer and make sure they are on if needed (mostly Pixel Kit)
-1. Run some examples to test if everything is ok:
+1. Run an example to test if everything is ok:
     - For Pixel Kit: `node examples/pk_stream_frame.js`
     - For Motion Sensor Kit: `node examples/msk_all.js`
 
+### Python 3 with Mu Editor
+
+1. Download the latest Node.js release [here](https://github.com/KanoComputing/community-sdk/releases)
+1. Unzip the folder on a folder you can find easily
+1. Connect your Kano device to your computer and make sure they are on if needed (mostly Pixel Kit)
+1. Open Mu Editor and switch to Python 3 mode
+1. Run an example to test if everything is ok by loading one of the example files from the unzipped folder:
+    - For Pixel Kit: `example_pixel_kit_stream_frame.py`
+    - For Motion Sensor Kit: `example_motion_sensor.py`
+1. Press the "Run" button on the toolbar
+
+### Python 3 without Mu Editor
+
+1. Download the latest Node.js release [here](https://github.com/KanoComputing/community-sdk/releases)
+1. Unzip the folder on a folder easy to access by the terminal (for example your home folder)
+1. Navigate to your unzipped folder using the terminal. Check how to do it on [Windows](https://www.watchingthenet.com/how-to-navigate-through-folders-when-using-windows-command-prompt.html), [MacOS](https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html) or [Linux](https://www.digitalocean.com/community/tutorials/basic-linux-navigation-and-file-management)
+1. Install all the dependencies by running `pip install -r requirements.txt`
+1. Run an example to test if everything is ok:
+    - For Pixel Kit: `python example_pixel_kit_stream_frame.py`
+    - For Motion Sensor Kit: `python example_motion_sensor.py`
+
+Make sure to use `python3` and `pip3` if needed.
