@@ -131,14 +131,14 @@ msk.on('gesture', (gestureValue) => {
 
 ### Event: `error-message`
 
-Triggered when Motion Sensor Kit gets gesture data. It only triggers the event when a gesture is recognized by the sensor.
+Triggered when Motion Sensor Kit gets an error message from the RPC connection.
 
 - `errorMessage` `<string>`: Message describing an error sent through RPC. 
 
 Example:
 
 ```javascript
-msk.on('erro-message', (errorMessage) => {
+msk.on('error-message', (errorMessage) => {
     console.log(errorMessage);
 })
 ```
@@ -298,7 +298,7 @@ Triggered when any button or joystick is pressed.
 Example:
 
 ```javascript
-device.on('button-down', (buttonId) => {
+rpk.on('button-down', (buttonId) => {
     console.log(buttonId);
 });
 ```
@@ -312,7 +312,7 @@ Triggered when any button or joystick is released.
 Example:
 
 ```javascript
-device.on('button-up', (buttonId) => {
+rpk.on('button-up', (buttonId) => {
     console.log(buttonId);
 });
 ```
@@ -326,7 +326,21 @@ Triggered when the "mode" dial is turned.
 Example:
 
 ```javascript
-device.on('dial', (modeId) => {
+rpk.on('dial', (modeId) => {
     console.log(modeId);
 });
+```
+
+### Event: `error-message`
+
+Triggered when Pixel Kit gets an error message from the RPC connection.
+
+- `errorMessage` `<string>`: Message describing an error sent through RPC. 
+
+Example:
+
+```javascript
+rpk.on('error-message', (errorMessage) => {
+    console.log(errorMessage);
+})
 ```
