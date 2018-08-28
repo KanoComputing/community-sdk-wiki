@@ -128,3 +128,17 @@ msk.on('gesture', (gestureValue) => {
     console.log(gestureValue);
 })
 ```
+
+### Event: `error-message`
+
+Triggered when Motion Sensor Kit gets gesture data. It only triggers the event when a gesture is recognized by the sensor.
+
+- `errorMessage` `<string>`: Message describing an error sent through RPC. 
+
+Example:
+
+```javascript
+msk.on('erro-message', (errorMessage) => {
+    console.log(errorMessage);
+})
+```
