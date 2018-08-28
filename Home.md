@@ -3,13 +3,13 @@
 Welcome to the Kano's Community SDK wiki!
 
 Here you will find:
-- Community SDK goals and roadmap
-- Available SDKs and their device support
-- Installation guides
-- Documentation of available features
-- How to use the SDK (with examples)
-- Inspirational projects!
-- How to contribute
+
+- [Goals and roadmap](https://github.com/KanoComputing/community-sdk/wiki/Goals-and-Roadmap)
+- [Available SDKs and their device support](https://github.com/KanoComputing/community-sdk/wiki/Available-SDKs)
+- [Installation guides](https://github.com/KanoComputing/community-sdk/wiki/Installation-Guides)
+- [Documentation](https://github.com/KanoComputing/community-sdk/wiki/Documentation)
+- [Inspirational projects!](https://github.com/KanoComputing/community-sdk/wiki/Inspirational-Projects)
+- [How to contribute](https://github.com/KanoComputing/community-sdk/wiki/How-to-Contribute)
 
 
 
