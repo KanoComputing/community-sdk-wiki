@@ -220,6 +220,7 @@ Get status of wifi adapter on Pixel Kit.
       * `rpcResponse.value.connected` `<boolean>`: Flags if Pixel Kit is connected to a wifi network.
       * `rpcResponse.value.ip` `<string>`: Ip address of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
       * `rpcResponse.value.ssid` `<string>`: Name of wifi network that the Pixel Kit is connected. Value is empty (`''`) if not connected.
+      * `rpcResponse.value.signal` `<integer>`: Strength of wifi signal. Ranges from `0` to `100`
       * `rpcResponse.value.mac_address` `<string>`: [Machine address](https://whatismyipaddress.com/mac-address) of your Pixel Kit network adapter.
       * `rpcResponse.value.port` `<string>`: Opened port to connect via Websockets. Should always be `9998`
       * `rpcResponse.value.netmask` `<string>`: [Network mask](https://support.microsoft.com/en-us/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics) of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
@@ -261,3 +262,20 @@ rpk.scanWifi()
     // Do something with the `response.value`
 })
 ```
+
+### `connectToWifi(ssid, password)`
+
+Connect your Pixel Kit to a network.
+
+* `ssid` `<string>`: Network's name
+* `password` <string>`: Network's password
+* Returns: <Promise>
+  * `rpcResponse` `<Object>`:
+    * `rpcResponse.connected` `<boolean>`: Flags if Pixel Kit is connected to a wifi network.
+    * `rpcResponse.ip` `<string>`: Ip address of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
+    * `rpcResponse.ssid` `<string>`: Name of wifi network that the Pixel Kit is connected. Value is empty (`''`) if not connected.
+    * `rpcResponse.value.signal` `<integer>`: Strength of wifi signal. Ranges from `0` to `100`
+    * `rpcResponse.mac_address` `<string>`: [Machine address](https://whatismyipaddress.com/mac-address) of your Pixel Kit network adapter.
+    * `rpcResponse.port` `<string>`: Opened port to connect via Websockets. Should always be `9998`
+    * `rpcResponse.netmask` `<string>`: [Network mask](https://support.microsoft.com/en-us/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics) of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
+    * `rpcResponse.gateway` `<string>`: [Default gatway](https://support.microsoft.com/en-us/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics) of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
