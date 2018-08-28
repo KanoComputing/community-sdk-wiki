@@ -22,7 +22,7 @@ The community SDK are scripts, tools and libraries to help you to interact with 
 ## Roadmap
 - Python SDK: Connect over Websockets
 - Make all the devices features available through the SDKs (only the more likely to be used are available now)
-- Add more devices to the SDK: Harry Potter wand, light ring (Computer Kit), future kits (speaker kit, camera kit, etc)
+- Add more devices to the SDK: Kickstarter Pixel Kit, Harry Potter wand, light ring (Computer Kit), future kits (speaker kit, camera kit, etc)
 - Add other languages: LUA, C#, C++, Java, Ruby, etc
 
 
