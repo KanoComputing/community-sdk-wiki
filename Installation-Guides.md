@@ -27,7 +27,7 @@ If your computer had python 2 already installed you might have to add `3` after 
 
 ## Downloading SDK and installing dependencies 
 
-### Javascript/Node.js
+### Javascript/Node.js entire project
 
 1. Download the latest Node.js release [here](https://github.com/KanoComputing/community-sdk/releases)
 1. Unzip the folder on a folder easy to access by the terminal (for example your home folder)
@@ -37,6 +37,13 @@ If your computer had python 2 already installed you might have to add `3` after 
 1. Run an example to test if everything is ok:
     - For Pixel Kit: `node examples/pk_stream_frame.js`
     - For Motion Sensor Kit: `node examples/msk_all.js`
+
+### Javascript/Node.js as a module
+
+1. Create a folder for your project
+1. Initialize your project: `yarn init`
+1. Add the Community SDK as dependency: `yarn add @Kano/community-sdk`
+1. Follow the [documentation](https://github.com/KanoComputing/community-sdk/wiki/Node.js-SDK:-API-Documentation) on to use it in your project.
 
 ### Python 3 with Mu Editor
 
