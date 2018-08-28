@@ -225,6 +225,14 @@ Get status of wifi adapter on Pixel Kit.
       * `rpcResponse.value.netmask` `<string>`: [Network mask](https://support.microsoft.com/en-us/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics) of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
       * `rpcResponse.value.gateway` `<string>`: [Default gatway](https://support.microsoft.com/en-us/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics) of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
 
+Example:
+
+```javascript
+rpk.getWifiStatus()
+.then((response) => {
+    // Do something with the `response.value`
+})
+```
 
 ### `scanWifi()`
 
@@ -237,5 +245,19 @@ Scan available wifi networks your Pixel Kit can connect to.
     * `rpcResponse.value` `<Array>`: Array of objects containing information about the available networks. This objects contain:
       * `ssid` `<string>`: Network name.
       * `signal` `<integer>`: Strength of wifi signal. Ranges from `0` to `100`
-      * `security` `<integer>`: Name of wifi network that the Pixel Kit is connected. Value is empty (`''`) if not connected.
+      * `security` `<integer>`: What kind of [authentication mode](https://esp-idf.readthedocs.io/en/latest/api-reference/wifi/esp_wifi.html#_CPPv216wifi_auth_mode_t) this network implements. 
+        * `0`: Open network
+        * `1`: [WEP](https://en.wikipedia.org/wiki/Wired_Equivalent_Privacy)
+        * `2`: [WPA_PSK](https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access)
+        * `3`: [WPA2_PSK](https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access)
+        * `4`: [WPA_WPA2_PSK](https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access)
+        * `5`: [WPA2_ENTERPRISE](https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access)
 
+Example:
+
+```javascript
+rpk.scanWifi()
+.then((response) => {
+    // Do something with the `response.value`
+})
+```
