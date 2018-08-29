@@ -29,13 +29,13 @@ The Node.js SDK offers access to 3 classes:
 
 Static method that returns all the devices connected to the computer over USB serial.
 
-Returns a promise that resolves with an array of devices. Each item of this array is an instance of correspondent device already connected.
+Returns a promise that resolves with an array of devices. Each item of this array is an instance of correspondent device **already connected**.
 
 - Returns: `<Promise>`
 
 Example:
 
-```javascipt
+```javascript
 const DeviceManager = require('communitysdk').DeviceManager;
 DeviceManager.listConnectedDevices
 .then((devices) => {
@@ -50,7 +50,7 @@ DeviceManager.listConnectedDevices
 
 ### `new MotionSensorKit(options)`
 
-Create an instance of `MotionSensorKit` class.
+Create an instance of `MotionSensorKit` class. Creating the instance does not open a connection to the device, for that, check the `msk.connect()` method.
 
 - `options` `<Object>`: Initialization options
     - `options.path` `<string>`: USB serial port path
@@ -62,6 +62,22 @@ Example:
 const MotionSensorKit = require('communitysdk').MotionSensorKit;
 let msk = new MotionSensor({ path: '/dev/tty.pathtoyourmotionsensorkithere' });
 ```
+### `msk.connect()`
+
+Opens a connection with the hardware. When getting your `MotionSensorKit` instance from `listConnectedDevices()`, it comes already connected. If you instantiate it yourself you must call `msk.connect()`, otherwise no connection will be established. This method resolves with the connected instance.
+
+- Returns: `<Promise>`
+
+Example:
+
+```javascript
+const MotionSensorKit = require('communitysdk').MotionSensorKit;
+let msk = new MotionSensorKit({path: '/dev/tty.pathtoyourpixelkithere'});
+msk.connect()
+.then((connectedMsk) => {
+    // Do something with `connectedMsk` or `msk`
+});
+```
 
 ### `msk.setMode(mode)`
 
@@ -72,7 +88,7 @@ Switch Motion Sensor Kit modes. The available modes are `proximity` and `gesture
 
 Example:
 
-```javascipt
+```javascript
 msk.setMode('gesture')
 .then(() => {
    // Motion Sensor successfully switched to gesture mode
@@ -91,8 +107,8 @@ Set how often the Motion Sensor Kit will poll for proximity data.
 
 Example:
 
-```javascipt
-msk.setMode('gesture')
+```javascript
+msk.setInterval(250)
 .then(() => {
    // Motion Sensor successfully switched to gesture mode
 })
@@ -133,7 +149,7 @@ msk.on('gesture', (gestureValue) => {
 
 Triggered when Motion Sensor Kit gets an error message from the RPC connection.
 
-- `errorMessage` `<string>`: Message describing an error sent through RPC. 
+- `errorMessage` `<string>`: Message describing an error sent through RPC.
 
 Example:
 
@@ -147,7 +163,7 @@ msk.on('error-message', (errorMessage) => {
 
 ### `new RetailPixelKit(options)`
 
-Create an instance of `RetailPixelKit` class. It's common to import this class as just `PixelKit`.
+Create an instance of `RetailPixelKit` class.  Creating the instance does not open a connection to the device, for that, check the `rpk.connect()` method.
 
 - `options` `<Object>`: Initialization options
     - `options.path` `<string>`: USB serial port path. If both `options.ip` and `options.path` are provided, `options.path` is preferred.
@@ -158,9 +174,26 @@ Example:
 
 ```javascript
 const RetailPixelKit = require('communitysdk').RetailPixelKit;
-let rpk = new RetailPixelKit({ 
-    path: '/dev/tty.pathtoyourmotionsensorkithere',
+let rpk = new RetailPixelKit({
+    path: '/dev/tty.pathtoyourpixelkithere',
     ip: '192.168.0.2'
+});
+```
+
+### `rpk.connect()`
+
+Opens a connection with the hardware. When getting your `RetailPixelKit` instance from `listConnectedDevices()`, it comes already connected. If you instantiate it yourself you must call `rpk.connect()`, otherwise no connection will be established. This method resolves with the connected instance.
+
+- Returns: `<Promise>`
+
+Example:
+
+```javascript
+const RetailPixelKit = require('communitysdk').RetailPixelKit;
+let rpk = new RetailPixelKit({path: '/dev/tty.pathtoyourpixelkithere'});
+rpk.connect()
+.then((connectedRpk) => {
+    // Do something with `connectedRPK` or `rpk`
 });
 ```
 
@@ -218,7 +251,7 @@ Get status of wifi adapter on Pixel Kit.
     * `rpcResponse.type` `<string>`: This should always be `rpc-response`
     * `rpcResponse.err` `<integer>`: This should always be `0`
     * `rpcResponse.id` `<string>`: RPC request id that this response relates to.
-    * `rpcResponse.value` `<Object>`: 
+    * `rpcResponse.value` `<Object>`:
       * `rpcResponse.value.connected` `<boolean>`: Flags if Pixel Kit is connected to a wifi network.
       * `rpcResponse.value.ip` `<string>`: Ip address of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
       * `rpcResponse.value.ssid` `<string>`: Name of wifi network that the Pixel Kit is connected. Value is empty (`''`) if not connected.
@@ -249,7 +282,7 @@ Scan available wifi networks your Pixel Kit can connect to.
     * `rpcResponse.value` `<Array>`: Array of objects containing information about the available networks. This objects contain:
       * `ssid` `<string>`: Network name.
       * `signal` `<integer>`: Strength of wifi signal. Ranges from `0` to `100`
-      * `security` `<integer>`: What kind of [authentication mode](https://esp-idf.readthedocs.io/en/latest/api-reference/wifi/esp_wifi.html#_CPPv216wifi_auth_mode_t) this network implements. 
+      * `security` `<integer>`: What kind of [authentication mode](https://esp-idf.readthedocs.io/en/latest/api-reference/wifi/esp_wifi.html#_CPPv216wifi_auth_mode_t) this network implements.
         * `0`: Open network
         * `1`: [WEP](https://en.wikipedia.org/wiki/Wired_Equivalent_Privacy)
         * `2`: [WPA_PSK](https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access)
@@ -271,7 +304,7 @@ rpk.scanWifi()
 Connect your Pixel Kit to a network.
 
 * `ssid` `<string>`: Network's name
-* `password` <string>`: Network's password
+* `password` `<string>`: Network's password
 * Returns: <Promise>
   * `rpcResponse` `<Object>`:
     * `rpcResponse.connected` `<boolean>`: Flags if Pixel Kit is connected to a wifi network.
@@ -338,7 +371,7 @@ rpk.on('dial', (modeId) => {
 
 Triggered when Pixel Kit gets an error message from the RPC connection.
 
-- `errorMessage` `<string>`: Message describing an error sent through RPC. 
+- `errorMessage` `<string>`: Message describing an error sent through RPC.
 
 Example:
 
