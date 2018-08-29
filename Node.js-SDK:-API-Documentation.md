@@ -195,6 +195,7 @@ Get battery percentage and charging status.
   * `rpcResponse` `<Object>`:
     * `rpcResponse.type` `<string>`: This should always be `rpc-response`
     * `rpcResponse.err` `<integer>`: This should always be `0`
+    * `rpcResponse.id` `<string>`: RPC request id that this response relates to.
     * `rpcResponse.value` `<Object>`:
       * `rpcResponse.value.percent` `<string>`: Should be a value between `'0'` and `'100'`
       * `rpcResponse.value.status` `<string>`: Should be `'Charging'` or `'Discharging'`
@@ -216,6 +217,7 @@ Get status of wifi adapter on Pixel Kit.
   * `rpcResponse` `<Object>`:
     * `rpcResponse.type` `<string>`: This should always be `rpc-response`
     * `rpcResponse.err` `<integer>`: This should always be `0`
+    * `rpcResponse.id` `<string>`: RPC request id that this response relates to.
     * `rpcResponse.value` `<Object>`: 
       * `rpcResponse.value.connected` `<boolean>`: Flags if Pixel Kit is connected to a wifi network.
       * `rpcResponse.value.ip` `<string>`: Ip address of your Pixel Kit. Returns `0.0.0.0` if not connected to any network.
@@ -243,6 +245,7 @@ Scan available wifi networks your Pixel Kit can connect to.
   * `rpcResponse` `<Object>`:
     * `rpcResponse.type` `<string>`: This should always be `rpc-response`
     * `rpcResponse.err` `<integer>`: This should always be `0`
+    * `rpcResponse.id` `<string>`: RPC request id that this response relates to.
     * `rpcResponse.value` `<Array>`: Array of objects containing information about the available networks. This objects contain:
       * `ssid` `<string>`: Network name.
       * `signal` `<integer>`: Strength of wifi signal. Ranges from `0` to `100`
