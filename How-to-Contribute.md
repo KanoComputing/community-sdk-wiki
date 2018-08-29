@@ -1,0 +1,3 @@
+We'll provide more detail on how to submit requests, report bugs and propose improvements on the Community SDKs in a near future. For now, we'll proxy you to [Python Software Foundation's Code of Conduct](https://www.python.org/psf/codeofconduct/) which is a beautiful way to describe what we expect from members of our community. 
+
+feel free to use our [Github Issues](https://github.com/KanoComputing/community-sdk/issues) to write us about ideas, concerns and problems you might have.
