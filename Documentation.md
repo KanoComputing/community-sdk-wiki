@@ -1,6 +1,6 @@
 ## API Documentation
 
-- [Javascript/Node.js](https://github.com/KanoComputing/community-sdk/wiki/Node.js-SDK:-API-Documentation)
+- [Javascript/Node.js](https://github.com/KanoComputing/community-sdk/wiki/Node.js-SDK-API-Documentation)
 - [Python 3](https://github.com/KanoComputing/community-sdk/wiki/Python-SDK:-API-Documentation)
 
 ## Examples
