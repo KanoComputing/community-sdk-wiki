@@ -1,8 +1,8 @@
 ## Before you start (requirements)
 
-You will need to install or have installed a few softwares before you start. Those are just enough use the programming language and a dependency manager (so it's easy to install the other dependencies).
+You will need to install or have installed a few softwares before you start. Those are just enough to use the programming language. The only extra software is a dependency manager (so it's easy to install the other dependencies).
 
-We won't go in detail on how to install it but a quick search "How to install *name of the software* on *name of your operational system*" will probably show enough tutorials.
+We won't go in detail on how to install it but a quick search "How to install *name of the software* on *name of your operational system*" will probably lead you to plenty tutorials.
 
 You will also need drivers to make your computer able to communicate with Kano devices. Luckly all the required drivers will be in place by just downloading and installing [Kano Code](https://kano.me/app). If you are running a Linux distribution, then you are probably safe already (get in touch if you have issues).
 
@@ -25,7 +25,7 @@ You can check Python and Pip versions by typing `node --version` and `yarn --ver
 
 If your computer had python 2 already installed you might have to add `3` after all your commands, like `python3 --version` and `pip3 --version`. We strongly recommend using [Mu Editor](https://codewith.mu/) if you don't want to deal with this kind of issue.
 
-## Downloading SDK and installing dependencies 
+## Downloading SDK and installing dependencies
 
 ### Javascript/Node.js entire project
 
@@ -42,7 +42,7 @@ If your computer had python 2 already installed you might have to add `3` after 
 
 1. Create a folder for your project
 1. Initialize your project: `yarn init`
-1. Add the Community SDK as dependency: `yarn add @Kano/community-sdk` 
+1. Add the Community SDK as dependency: `yarn add @Kano/community-sdk`
 1. Follow the [documentation](https://github.com/KanoComputing/community-sdk/wiki/Node.js-SDK:-API-Documentation) on to use it in your project.
 
 ### Python 3 with Mu Editor
