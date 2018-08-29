@@ -35,8 +35,8 @@ If your computer had python 2 already installed you might have to add `3` after 
 1. Install all the dependencies by running `yarn install`. That might take a while.
 1. Connect your Kano device to your computer and make sure they are on if needed (mostly Pixel Kit)
 1. Run an example to test if everything is ok:
-    - For Pixel Kit: `node examples/pk_stream_frame.js`
-    - For Motion Sensor Kit: `node examples/msk_all.js`
+    - For Pixel Kit: `node examples/rpk_stream_frame.js`
+    - For Motion Sensor Kit: `node examples/msk_proximity_and_gesture_data.js`
 
 ### Javascript/Node.js as a module (not ready yet)
 
