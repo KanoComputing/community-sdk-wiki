@@ -1,6 +1,6 @@
 - [Home](https://github.com/KanoComputing/community-sdk/wiki)
 - [Goals and roadmap](https://github.com/KanoComputing/community-sdk/wiki/Goals-and-Roadmap)
-- [Available SDKs and their device support](https://github.com/KanoComputing/community-sdk/wiki/Available-SDKs)
+- [Available SDKs and device support](https://github.com/KanoComputing/community-sdk/wiki/Available-SDKs)
 - [Installation guides](https://github.com/KanoComputing/community-sdk/wiki/Installation-Guides)
 - [Documentation and Examples](https://github.com/KanoComputing/community-sdk/wiki/Documentation-and-Examples)
 - [Inspirational projects!](https://github.com/KanoComputing/community-sdk/wiki/Inspirational-Projects)
