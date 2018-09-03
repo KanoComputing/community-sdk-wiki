@@ -18,11 +18,14 @@
 
 ### Python 3
 
-- Listing all available Kano devices connected to your computer
-- Getting proximity and gesture data from Motion Sensor Kit
-- Changing modes on Motion Sensor Kit
-- Changing polling interval on Motion Sensor Kit
-- Streaming to Pixel Kit
-- Color conversion for Pixel Kit
-- Drawing shapes on Pixel Kit
-- Getting button, joystick and dial events from Pixel Kit
+- [Listing all available Kano devices connected to your computer](https://github.com/KanoComputing/community-sdk/blob/python/example_list_connected_devices.py)
+<!-- - Getting proximity and gesture data from Motion Sensor Kit -->
+<!-- - Changing modes on Motion Sensor Kit -->
+- [Getting proximity values from Motion Sensor Kit.](https://github.com/KanoComputing/community-sdk/blob/python/example_motion_sensor_proximity_data.py)
+- [Getting gesture name from Motion Sensor Kit.](https://github.com/KanoComputing/community-sdk/blob/python/example_motion_sensor_gesture_data.py)
+- [Getting proximity values and plotting a graph on Mu Editor.](https://github.com/KanoComputing/community-sdk/blob/python/example_motion_sensor_plotter.py)
+- [Changing polling interval on Motion Sensor Kit.](https://github.com/KanoComputing/community-sdk/blob/python/example_motion_sensor_polling_interval.py)
+- [Scanning for available networks and getting battery and wifi status on Pixel Kit.](https://github.com/KanoComputing/community-sdk/blob/python/example_pixel_kit_get_status.py)
+- [Streaming to Pixel Kit.](https://github.com/KanoComputing/community-sdk/blob/python/example_pixel_kit_stream_frame.py)
+- [Getting button, joystick and dial events from Pixel Kit.](https://github.com/KanoComputing/community-sdk/blob/python/example_pixel_kit_buttons.py)
+<!-- - [Connecting Pixel Kit to Wifi.]() -->
