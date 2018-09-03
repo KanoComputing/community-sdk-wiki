@@ -262,7 +262,7 @@ def print_button_id(buttonId):
 rpk.on_button_down = print_button_id
 ```
 
-### `rpk.on_button_down(buttonId)`
+### `rpk.on_button_up(buttonId)`
 
 This method is called when any button or joystick is released.
 
