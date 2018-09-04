@@ -29,7 +29,7 @@ If your computer had python 2 already installed you might have to add `3` after 
 
 ### Javascript/Node.js entire project
 
-1. Download the latest Node.js release [here](https://github.com/KanoComputing/community-sdk/releases)
+1. Download the latest Node.js SDK release [here](https://github.com/KanoComputing/community-sdk/releases)
 1. Unzip the folder on a folder easy to access by the terminal (for example your home folder)
 1. Navigate to your unzipped folder using the terminal. Check how to do it on [Windows](https://www.watchingthenet.com/how-to-navigate-through-folders-when-using-windows-command-prompt.html), [MacOS](https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html) or [Linux](https://www.digitalocean.com/community/tutorials/basic-linux-navigation-and-file-management)
 1. Install all the dependencies by running `yarn install`. That might take a while.
@@ -47,7 +47,7 @@ If your computer had python 2 already installed you might have to add `3` after 
 
 ### Python 3 with Mu Editor
 
-1. Download the latest Node.js release [here](https://github.com/KanoComputing/community-sdk/releases)
+1. Download the latest Python SDK release [here](https://github.com/KanoComputing/community-sdk/releases)
 1. Unzip the folder on a folder you can find easily
 1. Connect your Kano device to your computer and make sure they are on if needed (mostly Pixel Kit)
 1. Open Mu Editor and switch to Python 3 mode
@@ -58,7 +58,7 @@ If your computer had python 2 already installed you might have to add `3` after 
 
 ### Python 3 without Mu Editor
 
-1. Download the latest Node.js release [here](https://github.com/KanoComputing/community-sdk/releases)
+1. Download the latest Python SDK release [here](https://github.com/KanoComputing/community-sdk/releases)
 1. Unzip the folder on a folder easy to access by the terminal (for example your home folder)
 1. Navigate to your unzipped folder using the terminal. Check how to do it on [Windows](https://www.watchingthenet.com/how-to-navigate-through-folders-when-using-windows-command-prompt.html), [MacOS](https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html) or [Linux](https://www.digitalocean.com/community/tutorials/basic-linux-navigation-and-file-management)
 1. Install all the dependencies by running `pip install -r requirements.txt`
