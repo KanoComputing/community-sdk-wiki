@@ -20,7 +20,7 @@ We recommend installing [Mu Editor](https://codewith.mu/) as it will install all
 - [Python v3.6.5 or higher](https://www.python.org/downloads/release/python-370/)
 - [Pip 9.0.1 or higher](https://pip.pypa.io/en/stable/installing/) (already installed if you install python from the link above)
 
-You can check Python and Pip versions by typing `node --version` and `yarn --version` on your terminal/console and it will print something like `Python 3.6.5` or `pip 9.0.1 from /usr/lib/python3/dist-packages (python 3.6)
+You can check Python and Pip versions by typing `python --version` and `pip --version` on your terminal/console and it will print something like `Python 3.6.5` or `pip 9.0.1 from /usr/lib/python3/dist-packages (python 3.6)
 `.
 
 If your computer had python 2 already installed you might have to add `3` after all your commands, like `python3 --version` and `pip3 --version`. We strongly recommend using [Mu Editor](https://codewith.mu/) if you don't want to deal with this kind of issue.
