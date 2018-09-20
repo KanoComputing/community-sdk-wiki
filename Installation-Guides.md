@@ -38,11 +38,11 @@ If your computer had python 2 already installed you might have to add `3` after 
     - For Pixel Kit: `node examples/rpk_stream_frame.js`
     - For Motion Sensor Kit: `node examples/msk_proximity_and_gesture_data.js`
 
-### Javascript/Node.js as a module (not ready yet)
+### Javascript/Node.js as a module
 
 1. Create a folder for your project
 1. Initialize your project: `yarn init`
-1. Add the Community SDK as dependency: `yarn add @Kano/community-sdk`
+1. Add the Community SDK as dependency: `yarn add KanoComputing/community-sdk#nodejs`
 1. Follow the [documentation](https://github.com/KanoComputing/community-sdk/wiki/Node.js-SDK:-API-Documentation) on to use it in your project.
 
 ### Python 3 with Mu Editor
