@@ -29,3 +29,12 @@
 - [Streaming to Pixel Kit.](https://github.com/KanoComputing/community-sdk/blob/python/example_pixel_kit_stream_frame.py)
 - [Getting button, joystick and dial events from Pixel Kit.](https://github.com/KanoComputing/community-sdk/blob/python/example_pixel_kit_buttons.py)
 <!-- - [Connecting Pixel Kit to Wifi.]() -->
+
+### Note for Windows users
+
+As noticed on [this issue](https://github.com/KanoComputing/community-sdk/issues/11), Windows users might get an error saying `communitysdk` module can't be found. In those cases, adding the following lines to the beginning of your script will "fix" the issue:
+
+```python
+import sys,os
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+```
