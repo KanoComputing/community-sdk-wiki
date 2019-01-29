@@ -14,3 +14,5 @@ include:
   - Installation-Guides.md
   - Home.md
   - Node.js-SDK-API-Documentation.md
+
+theme: jekyll-theme-minimal
