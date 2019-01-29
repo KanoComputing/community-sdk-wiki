@@ -1,0 +1,16 @@
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - Available-SDKs.md
+  - How-to-Contribute.md
+  - Python-SDK-API-Documentation.md
+  - Documentation-and-Examples.md
+  - Inspirational-Projects.md
+  - _Sidebar.md
+  - Goals-and-Roadmap.md
+  - Installation-Guides.md
+  - Home.md
+  - Node.js-SDK-API-Documentation.md
