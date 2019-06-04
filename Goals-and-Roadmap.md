@@ -15,7 +15,7 @@ The community SDK are scripts, tools and libraries to help you to interact with 
 
 ## Not goals
 - Performance oriented SDK: If you are looking for a "production" ready SDK, please refer to the Kano Devices SDK (yet to come)
-- Use **device features** that are not available on [Kano Code](https://kano.me/app): You can use your favorite programming language to do a lot of things you can't on Kano Code, but your device will not get new features by just using the Community SDK (If you find out we are wrong about that, let us know and we'll be our star!).
+- Use **device features** that are not available on [Kano Code](https://kano.me/app): You can use your favorite programming language to do a lot of things you can't on Kano Code, but your device will not get new features by just using the Community SDK (If you find out we are wrong about that, let us know and you'll be our star!).
 
 ## Roadmap
 - Python SDK: Connect over Websockets
